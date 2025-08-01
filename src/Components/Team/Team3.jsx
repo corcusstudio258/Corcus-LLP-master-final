@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Team3 = () => {
 
     const teamContent = [
-        {img:'/assets/img/team/01.jpg', name:'Ayush Anand', content:'CEO FOUNDER '},
+        {img:'/assets/img/team/Ayush.jpg', name:'Ayush Anand', content:'CEO FOUNDER '},
         {img:'/assets/img/team/02.jpg', name:'Vidya Gupta', content:'Co-Founder'},
         {img:'/assets/img/team/03.jpg', name:'Animesh Anand', content:'Co-Founder'},
         {img:'/assets/img/team/04.jpg', name:'Tanisha', content:'CFO'},
