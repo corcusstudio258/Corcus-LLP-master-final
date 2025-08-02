@@ -9,7 +9,7 @@ const Team3 = () => {
         {img:'/assets/img/team/04.jpg', name:'Tanisha', content:'CFO'},
         {img:'/assets/img/team/05.jpg', name:'Durganshi', content:'Social Media Manager'},
         {img:'/assets/img/team/Priyanshu.jpg', name:'Priyanshu Kumar', content:'Shopify Developer / Web Developer'},
-        {img:'/assets/img/team/Kajal.jpg', name:'Kajal Kumari', content:'HR Executive cum Sales Assistant'},
+        {img:'/assets/img/team/Kajal.jpg', name:'Kajal Kumari', content:'HR'},
         {img:'/assets/img/team/Parsant.jpg', name:'Prashant Kumar', content:'Cinematographer (Intern)'},
         {img:'/assets/img/team/09.jpg', name:'Mayank', content:'Team Leader / Content Writer'},
         {img:'/assets/img/team/10.jpg', name:'Deepak', content:'Graphic Designer'},
