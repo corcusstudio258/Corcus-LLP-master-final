@@ -7,6 +7,7 @@ const Team3 = () => {
         {img:'/assets/img/team/02.jpg', name:'Vidya Gupta', content:'Co-Founder'},
         {img:'/assets/img/team/03.jpg', name:'Animesh Anand', content:'Co-Founder'},
         {img:'/assets/img/team/04.jpg', name:'Tanisha', content:'CFO'},
+        {img:'/assets/img/team/Mohit.jpg', name:'Mohit', content:'Social Media Manager'},
         {img:'/assets/img/team/05.jpg', name:'Durganshi', content:'Social Media Manager'},
         {img:'/assets/img/team/Priyanshu.jpg', name:'Priyanshu Kumar', content:'Shopify Developer / Web Developer'},
         {img:'/assets/img/team/Kajal.jpg', name:'Kajal Kumari', content:'HR'},
@@ -15,7 +16,7 @@ const Team3 = () => {
         {img:'/assets/img/team/10.jpg', name:'Deepak', content:'Graphic Designer'},
         {img:'/assets/img/team/11.jpg', name:'Sujit', content:'Graphic Designer'},
         {img:'/assets/img/team/12.jpg', name:'Alka', content:'Graphic Designer'},
-        {img:'/assets/img/team/13.jpg', name:'Mohit', content:'Social Media Manager'},
+        
         
       ];
 
