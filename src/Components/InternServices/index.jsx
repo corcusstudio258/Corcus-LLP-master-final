@@ -188,7 +188,7 @@ const InternS = () => {
                   <span className="price-tag">Price: {service.price}</span>
                   <br />
                   <button className={`btn btn-${service.btnStyle} custom-btn mt-3`} onClick={() => setIsPopupOpen(true)}>
-                    Get your free proposal
+                    Read More
                   </button>
                 </p>
               </div>
