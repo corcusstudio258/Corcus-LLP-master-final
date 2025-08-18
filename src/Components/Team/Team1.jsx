@@ -4,8 +4,8 @@ const Team1 = () => {
 
     const teamContent = [
         {img:'/assets/img/team/01.jpg', name:'Reful Miya', content:'CO-Leader',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team/02.jpg', name:'Shikhon Islam', content:'Web Developer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
-        {img:'/assets/img/team/03.jpg', name:'Abdullah Islam', content:'Web Development',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        {img:'/assets/img/team/Priyanshu.jpg', name:'Priyanshu Kumar', content:'Web Developer',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
+        // {img:'/assets/img/team/03.jpg', name:'Abdullah Islam', content:'Web Development',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
         {img:'/assets/img/team/04.jpg', name:'Leslie Alexander', content:'Nursing Assistant',instagram:'#',facebook:'#',twitter:'#',linkedin:'#'},
       ];
 
