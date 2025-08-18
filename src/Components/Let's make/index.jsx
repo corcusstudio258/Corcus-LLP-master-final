@@ -41,7 +41,7 @@ const Letmake = () => {
             help your business grow. Let's make things happen!
           </p>
           <button onClick={() => setIsPopupOpen(true)} style={styles.button}>
-            Get your free proposal
+            Contact Us
           </button>
         </div>
         <div>
