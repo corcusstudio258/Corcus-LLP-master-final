@@ -42,7 +42,7 @@ const PopupForm = ({ isOpen, setIsOpen }) => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycby3F3QHRbptPVMRogJxokydQiRbh-RqZ5eejvvXG6QKY3LkBM4vPmEX-XLld3f00ZVcSg/exec",
+        "https://docs.google.com/spreadsheets/d/1ssb_p_3CBtRL58VlTeWjvV--o9i9FfjfAXbOsw5ZVkU/edit?usp=sharing",
         {
           method: "POST",
           headers: {
