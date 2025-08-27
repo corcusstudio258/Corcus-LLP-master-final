@@ -44,7 +44,7 @@ const ContactInfo2 = () => {
       });
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwRuMSP5L__4qJ2B-rHtlKDCy2UEKQY7lBt8EiSeLPvmxC3O13fmk5duIvBf7gx03gTPw/exec",
+        "https://docs.google.com/spreadsheets/d/1ssb_p_3CBtRL58VlTeWjvV--o9i9FfjfAXbOsw5ZVkU/edit?usp=sharing",
         {
           method: "POST",
           body: formDataToSend,
