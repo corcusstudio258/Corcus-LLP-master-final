@@ -44,7 +44,7 @@ const ContactInfo2 = () => {
       });
 
       const response = await fetch(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhK91auMffyiONmNUUfk8vyqFOb5lJqvmUY60QQ1mPo1mINiuYxiY3Z2cxIYskNjI6jYLccj7kff6i/pubhtml?gid=0&single=true",
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhK91auMffyiONmNUUfk8vyqFOb5lJqvmUY60QQ1mPo1mINiuYxiY3Z2cxIYskNjI6jYLccj7kff6i/pubhtml",
         {
           method: "POST",
           body: formDataToSend,
