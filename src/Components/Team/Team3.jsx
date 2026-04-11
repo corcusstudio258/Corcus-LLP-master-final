@@ -11,7 +11,7 @@ const Team3 = () => {
         {img:'/assets/img/team/05.jpg', name:'Durganshi', content:'Social Media Manager'},
         {img:'/assets/img/team/Shweta.jpg', name:'Sweta Kumari', content:'Content writer'},
         {img:'/assets/img/team/Perna.jpg', name:'Prerna Raj', content:'Team leader'},
-        {img:'/assets/img/team/Priyanshu.jpg', name:'Priyanshu Kumar', content:'Shopify Developer / Web Developer'},
+        {img:'/assets/img/team/Priaynshu.jpg', name:'Priyanshu Kumar', content:'Shopify Developer / Web Developer'},
         {img:'/assets/img/team/Kajal.jpg', name:'Kajal Kumari', content:'HR'},
         {img:'/assets/img/team/Sudhir.jpg', name:'Sudhir Kumar', content:'Video Editor'},
         {img:'/assets/img/team/Vivek.jpg', name:'Vivek Kumar', content:'Video Editor'},
