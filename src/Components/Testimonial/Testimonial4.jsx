@@ -51,7 +51,7 @@ const ClientFeedback = () => {
   ];
 
   return (
-    <div className="bg-white py-2">
+    <div className="bg-white py-5">
       <div className="container text-center mb-5">
         <style>{`
           .reveal-text {
@@ -67,138 +67,59 @@ const ClientFeedback = () => {
             }
           }
 
-          .testimonial-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease,
-              background-color 0.3s ease, color 0.3s ease;
-            aspect-ratio: 1/1.4;
-            display: flex;
-            flex-direction: column;
+          .swiper-container {
             width: 100%;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-                      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            padding: 20px 0;
           }
 
-          .card-body {
-            padding: 1rem;
-            height: 100%;
+          .swiper-slide {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: stretch;
+            height: auto;
           }
 
-          .testimonial-card:hover {
-            transform: translateY(-5px);
-            background-color: black;
-            color: white;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px,
-              rgba(0, 0, 0, 0.3) 0px 16px 56px, rgba(0, 0, 0, 0.3) 0px 24px 80px;
-          }
-
-          .testimonial-card:hover .card-subtitle {
-            color: #cccccc !important;
-          }
-
-          .testimonial-card:hover .star {
-            color: #ffd700;
-          }
-
-          .card-body {
-            padding: 2rem;
-            height: 100%;
-          }
-
-          .card-title {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .card-subtitle {
-            font-size: 0.7rem;
-            margin-bottom: 1rem;
-          }
-
-          .card-text {
-            font-size: 0.6rem;
-            line-height: 1.4;
-            flex-grow: 1;
-          }
           .testimonial-card {
             background-color: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease,
-              background-color 0.3s ease, color 0.3s ease;
-            aspect-ratio: 1/1.2;
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-height: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
             display: flex;
             flex-direction: column;
             width: 100%;
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-              rgba(17, 17, 26, 0.05) 0px 8px 32px;
-            padding: 1.5rem;
           }
+
           .card-body {
-            padding: 1rem;
+            padding: 1rem 0;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
           }
+
           .card-title {
             font-size: 1rem;
+            font-weight: bold;
             margin-bottom: 0.5rem;
             color: black;
           }
+
           .card-subtitle {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             margin-bottom: 1rem;
             color: #666;
           }
-          .card-text {
-            font-size: 0.6rem;
-            line-height: 1.4;
-            flex-grow: 1;
-            color: black;
-          }
-          .testimonial-card:hover .card-title,
-          .testimonial-card:hover .card-text {
-            color: white;
-          }
-          .card-text {
-            font-size: 0.8rem;
-            line-height: 1.8;
-            flex-grow: 1;
-            margin-top: 1rem;
-          }
-          padding: 1.5rem;
-          }
-          @media (max-width: 768px) {
-            .card-text {
-              font-size: 0.85rem;
-              line-height: 1.7;
-            }
-            .card-title {
-              font-size: 1.2rem;
-            }
-            .card-subtitle {
-              font-size: 0.9rem;
-            }
-            .testimonial-card {
-              padding: 1.5rem;
-              aspect-ratio: 1/1.4;
-            }
-          }
-          .animate-up {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUp 0.5s ease-out forwards;
-          }
 
-          @keyframes slideUp {
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
+          .star-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 1rem;
           }
 
           .star {
+            font-size: 1.2rem;
             animation: twinkle 1.5s infinite;
           }
 
@@ -216,8 +137,7 @@ const ClientFeedback = () => {
           }
 
           @keyframes twinkle {
-            0%,
-            100% {
+            0%, 100% {
               opacity: 1;
             }
             50% {
@@ -225,8 +145,92 @@ const ClientFeedback = () => {
             }
           }
 
+          .card-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: black;
+            flex-grow: 1;
+            margin-top: 1rem;
+          }
+
+          .testimonial-card:hover {
+            transform: translateY(-5px);
+            background-color: black;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px, rgba(0, 0, 0, 0.3) 0px 16px 56px, rgba(0, 0, 0, 0.3) 0px 24px 80px;
+          }
+
+          .testimonial-card:hover .card-title,
+          .testimonial-card:hover .card-text {
+            color: white;
+          }
+
+          .testimonial-card:hover .card-subtitle {
+            color: #cccccc !important;
+          }
+
+          .testimonial-card:hover .star {
+            color: #ffd700;
+          }
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: black;
+            background: rgba(0, 0, 0, 0.1);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            font-size: 20px;
+          }
+
+          @media (max-width: 768px) {
+            .testimonial-card {
+              min-height: 300px;
+              padding: 1.2rem;
+            }
+
+            .card-title {
+              font-size: 1rem;
+            }
+
+            .card-subtitle {
+              font-size: 0.8rem;
+            }
+
+            .card-text {
+              font-size: 0.85rem;
+              line-height: 1.5;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+              width: 35px;
+              height: 35px;
+            }
+          }
+
           .bg-white {
             background-color: white !important;
+          }
+
+          .animate-up {
+            opacity: 0;
+            animation: slideUp 0.5s ease-out forwards;
+          }
+
+          @keyframes slideUp {
+            to {
+              opacity: 1;
+            }
           }
         `}</style>
         <div className="reveal-text text-center">
@@ -249,22 +253,23 @@ const ClientFeedback = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container-fluid px-4" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={25}
           slidesPerView={1}
           navigation
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 20 },
+            0: { slidesPerView: 1, spaceBetween: 15 },
             768: { slidesPerView: 3, spaceBetween: 25 },
           }}
-          className="w-100"
+          className="swiper-container"
+          style={{ width: '100%' }}
         >
           {feedbacks.map((feedback, index) => (
-            <SwiperSlide key={index} className="h-100">
-              <div className="testimonial-card card h-100 shadow-sm p-3 d-flex flex-column">
+            <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="testimonial-card card shadow-sm d-flex flex-column">
                 <div className="card-body d-flex flex-column justify-content-between">
                   <div>
                     <h5 className="card-title font-weight-bold animate-up">
