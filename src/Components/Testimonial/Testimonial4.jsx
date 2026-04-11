@@ -52,7 +52,7 @@ const ClientFeedback = () => {
 
   return (
     <div className="bg-white py-2">
-      <div className="container text-left mb-5">
+      <div className="container text-center mb-5">
         <style>{`
           .reveal-text {
             opacity: 0;
@@ -229,7 +229,7 @@ const ClientFeedback = () => {
             background-color: white !important;
           }
         `}</style>
-        <div className="reveal-text">
+        <div className="reveal-text text-center">
           <h1
             className="display-4 font-weight-bold"
             style={{
