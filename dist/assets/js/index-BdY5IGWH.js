@@ -951,59 +951,50 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
           }
 
-          .swiper-container {
-            width: 100%;
-            padding: 20px 0;
-          }
-
-          .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            height: auto;
-          }
-
           .testimonial-card {
             background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            min-height: 350px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            border-radius: 12px;
+            padding: 2rem;
+            min-height: 380px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             width: 100%;
+            transition: all 0.3s ease;
           }
 
-          .card-body {
-            padding: 1rem 0;
-            height: 100%;
+          .card-body-custom {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
+            gap: 1rem;
           }
 
           .card-title {
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
             color: black;
+            line-height: 1.3;
           }
 
           .card-subtitle {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
             color: #666;
+            font-weight: 500;
           }
 
           .star-rating {
             display: flex;
-            gap: 5px;
+            gap: 8px;
             margin-bottom: 1rem;
           }
 
           .star {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            color: #ffc107;
             animation: twinkle 1.5s infinite;
           }
 
@@ -1025,23 +1016,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               opacity: 1;
             }
             50% {
-              opacity: 0.5;
+              opacity: 0.6;
             }
           }
 
           .card-text {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: black;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #333;
             flex-grow: 1;
-            margin-top: 1rem;
+            text-align: justify;
           }
 
           .testimonial-card:hover {
-            transform: translateY(-5px);
-            background-color: black;
+            transform: translateY(-8px);
+            background-color: #000;
             color: white;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px, rgba(0, 0, 0, 0.3) 0px 16px 56px, rgba(0, 0, 0, 0.3) 0px 24px 80px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
           }
 
           .testimonial-card:hover .card-title,
@@ -1050,36 +1041,44 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
 
           .testimonial-card:hover .card-subtitle {
-            color: #cccccc !important;
+            color: #ccc;
           }
 
           .testimonial-card:hover .star {
             color: #ffd700;
           }
 
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: black;
-            background: rgba(0, 0, 0, 0.1);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 50%;
+          /* Swiper Navigation Styling */
+          :global(.swiper-button-next),
+          :global(.swiper-button-prev) {
+            color: #000 !important;
+            background: rgba(0, 0, 0, 0.15) !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            top: 50% !important;
             transform: translateY(-50%);
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10 !important;
           }
 
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 20px;
+          :global(.swiper-button-next::after),
+          :global(.swiper-button-prev::after) {
+            font-size: 20px !important;
+            font-weight: bold !important;
+          }
+
+          :global(.swiper-button-next:hover),
+          :global(.swiper-button-prev:hover) {
+            background: rgba(0, 0, 0, 0.3) !important;
           }
 
           @media (max-width: 768px) {
             .testimonial-card {
-              min-height: 300px;
-              padding: 1.2rem;
+              min-height: 320px;
+              padding: 1.5rem;
             }
 
             .card-title {
@@ -1087,18 +1086,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
 
             .card-subtitle {
-              font-size: 0.8rem;
+              font-size: 0.85rem;
             }
 
             .card-text {
-              font-size: 0.85rem;
-              line-height: 1.5;
+              font-size: 0.9rem;
+              line-height: 1.6;
             }
 
-            .swiper-button-next,
-            .swiper-button-prev {
-              width: 35px;
-              height: 35px;
+            :global(.swiper-button-next),
+            :global(.swiper-button-prev) {
+              width: 40px !important;
+              height: 40px !important;
             }
           }
 
@@ -1107,16 +1106,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
 
           .animate-up {
-            opacity: 0;
-            animation: slideUp 0.5s ease-out forwards;
+            opacity: 1;
           }
-
-          @keyframes slideUp {
-            to {
-              opacity: 1;
-            }
-          }
-        `}),f.jsxs("div",{className:"reveal-text text-center",children:[f.jsx("h1",{className:"display-4 font-weight-bold",style:{WebkitTextStroke:"2px black",color:"transparent",fontWeight:900},children:"CLIENT"}),f.jsx("h2",{className:"display-3 font-weight-bold",style:{fontWeight:900},children:"FEEDBACK"})]})]}),f.jsx("div",{className:"container-fluid px-4",style:{maxWidth:"1200px",margin:"0 auto"},children:f.jsx(X0,{modules:[yP,wP],spaceBetween:25,slidesPerView:1,navigation:!0,autoplay:{delay:4e3,disableOnInteraction:!1},breakpoints:{0:{slidesPerView:1,spaceBetween:15},768:{slidesPerView:3,spaceBetween:25}},className:"swiper-container",style:{width:"100%"},children:n.map((r,e)=>f.jsx(K0,{style:{display:"flex",justifyContent:"center"},children:f.jsx("div",{className:"testimonial-card card shadow-sm d-flex flex-column",children:f.jsxs("div",{className:"card-body d-flex flex-column justify-content-between",children:[f.jsxs("div",{children:[f.jsx("h5",{className:"card-title font-weight-bold animate-up",children:r.name}),f.jsx("h6",{className:"card-subtitle mb-2 text-muted animate-up",children:r.title}),f.jsx("div",{className:"star-rating text-warning mb-3",children:[...Array(5)].map((t,i)=>f.jsx(Yc,{icon:IC,className:"star"},i))})]}),f.jsx("p",{className:"card-text mt-auto animate-up",children:r.review})]})})},e))})})]})},yp=({isOpen:n,onClose:r,children:e})=>n?f.jsx("div",{className:"popup-overlay",onClick:r,children:f.jsxs("div",{className:"popup-content",onClick:t=>t.stopPropagation(),children:[f.jsx("button",{className:"popup-close",onClick:r,children:"×"}),e]})}):null,bP=()=>{const[n,r]=T.useState({Name:"",Phone:"",Email:"",Business:"",Services:"",CustomService:""}),e=i=>{const{name:o,value:c}=i.target;r(u=>({...u,[o]:c}))},t=async i=>{i.preventDefault();const o=n.Services==="Other"?n.CustomService:n.Services,c={Name:n.Name,Phone:n.Phone,Email:n.Email,Business:n.Business,Services:o},u=new URLSearchParams;Object.entries(c).forEach(([d,h])=>u.append(d,h));try{const h=await(await fetch("https://script.google.com/macros/s/AKfycbxQkLpKHDXZ1J1XQN-6X4s1Jqx_zBWfdQy5O26KWwbJtnc7f4LtLU4DreKtoliRXwhp/exec",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:u.toString()})).text();console.log(h),alert("Form submitted successfully!"),r({Name:"",Phone:"",Email:"",Business:"",Services:"",CustomService:""})}catch(d){console.error("Error submitting form:",d),alert("Failed to submit form.")}};return f.jsxs(f.Fragment,{children:[f.jsxs("form",{className:"contact-form",onSubmit:t,children:[f.jsx("h2",{children:"Get Your Free Proposal"}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"Name",value:n.Name,onChange:e,placeholder:"Your Name",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"tel",name:"Phone",value:n.Phone,onChange:e,placeholder:"Your Phone Number",pattern:"[0-9]{10}",title:"Please enter a valid 10-digit phone number",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"email",name:"Email",value:n.Email,onChange:e,placeholder:"Your Email",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"Business",value:n.Business,onChange:e,placeholder:"Business Name / Website",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsxs("select",{name:"Services",value:n.Services,onChange:e,required:!0,children:[f.jsx("option",{value:"",children:"Which services are you looking for?"}),f.jsx("option",{value:"Website Design",children:"Website Design"}),f.jsx("option",{value:"Social Media Marketing",children:"Social Media Marketing"}),f.jsx("option",{value:"Branding",children:"Branding"}),f.jsx("option",{value:"Performance Marketing",children:"Performance Marketing"}),f.jsx("option",{value:"Video/Reel Production",children:"Video/Reel Production"}),f.jsx("option",{value:"Other",children:"Other (Write Below)"})]})}),n.Services==="Other"&&f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"CustomService",value:n.CustomService,onChange:e,placeholder:"Please specify your service",required:!0})}),f.jsx("button",{type:"submit",className:"submit-btn",children:"Send Proposal Request"})]}),f.jsx("style",{children:`
+        `}),f.jsxs("div",{className:"reveal-text text-center",children:[f.jsx("h1",{className:"display-4 font-weight-bold",style:{WebkitTextStroke:"2px black",color:"transparent",fontWeight:900},children:"CLIENT"}),f.jsx("h2",{className:"display-3 font-weight-bold",style:{fontWeight:900},children:"FEEDBACK"})]})]}),f.jsx("div",{className:"container",children:f.jsx(X0,{modules:[yP,wP],spaceBetween:20,slidesPerView:1,navigation:!0,autoplay:{delay:4e3,disableOnInteraction:!1},breakpoints:{320:{slidesPerView:1,spaceBetween:15},768:{slidesPerView:3,spaceBetween:20}},style:{paddingBottom:"50px"},children:n.map((r,e)=>f.jsx(K0,{children:f.jsx("div",{className:"testimonial-card",children:f.jsxs("div",{className:"card-body-custom d-flex flex-column justify-content-between",children:[f.jsxs("div",{children:[f.jsx("h5",{className:"card-title font-weight-bold animate-up",children:r.name}),f.jsx("h6",{className:"card-subtitle mb-2 animate-up",children:r.title}),f.jsx("div",{className:"star-rating text-warning mb-3",children:[...Array(5)].map((t,i)=>f.jsx(Yc,{icon:IC,className:"star"},i))})]}),f.jsx("p",{className:"card-text mt-auto animate-up",children:r.review})]})})},e))})})]})},yp=({isOpen:n,onClose:r,children:e})=>n?f.jsx("div",{className:"popup-overlay",onClick:r,children:f.jsxs("div",{className:"popup-content",onClick:t=>t.stopPropagation(),children:[f.jsx("button",{className:"popup-close",onClick:r,children:"×"}),e]})}):null,bP=()=>{const[n,r]=T.useState({Name:"",Phone:"",Email:"",Business:"",Services:"",CustomService:""}),e=i=>{const{name:o,value:c}=i.target;r(u=>({...u,[o]:c}))},t=async i=>{i.preventDefault();const o=n.Services==="Other"?n.CustomService:n.Services,c={Name:n.Name,Phone:n.Phone,Email:n.Email,Business:n.Business,Services:o},u=new URLSearchParams;Object.entries(c).forEach(([d,h])=>u.append(d,h));try{const h=await(await fetch("https://script.google.com/macros/s/AKfycbxQkLpKHDXZ1J1XQN-6X4s1Jqx_zBWfdQy5O26KWwbJtnc7f4LtLU4DreKtoliRXwhp/exec",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:u.toString()})).text();console.log(h),alert("Form submitted successfully!"),r({Name:"",Phone:"",Email:"",Business:"",Services:"",CustomService:""})}catch(d){console.error("Error submitting form:",d),alert("Failed to submit form.")}};return f.jsxs(f.Fragment,{children:[f.jsxs("form",{className:"contact-form",onSubmit:t,children:[f.jsx("h2",{children:"Get Your Free Proposal"}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"Name",value:n.Name,onChange:e,placeholder:"Your Name",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"tel",name:"Phone",value:n.Phone,onChange:e,placeholder:"Your Phone Number",pattern:"[0-9]{10}",title:"Please enter a valid 10-digit phone number",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"email",name:"Email",value:n.Email,onChange:e,placeholder:"Your Email",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"Business",value:n.Business,onChange:e,placeholder:"Business Name / Website",required:!0})}),f.jsx("div",{className:"form-group",children:f.jsxs("select",{name:"Services",value:n.Services,onChange:e,required:!0,children:[f.jsx("option",{value:"",children:"Which services are you looking for?"}),f.jsx("option",{value:"Website Design",children:"Website Design"}),f.jsx("option",{value:"Social Media Marketing",children:"Social Media Marketing"}),f.jsx("option",{value:"Branding",children:"Branding"}),f.jsx("option",{value:"Performance Marketing",children:"Performance Marketing"}),f.jsx("option",{value:"Video/Reel Production",children:"Video/Reel Production"}),f.jsx("option",{value:"Other",children:"Other (Write Below)"})]})}),n.Services==="Other"&&f.jsx("div",{className:"form-group",children:f.jsx("input",{type:"text",name:"CustomService",value:n.CustomService,onChange:e,placeholder:"Please specify your service",required:!0})}),f.jsx("button",{type:"submit",className:"submit-btn",children:"Send Proposal Request"})]}),f.jsx("style",{children:`
         .contact-form {
           max-width: 500px;
           margin: 40px auto;

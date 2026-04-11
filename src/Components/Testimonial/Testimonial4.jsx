@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const ClientFeedback = () => {
   const feedbacks = [
@@ -67,59 +69,50 @@ const ClientFeedback = () => {
             }
           }
 
-          .swiper-container {
-            width: 100%;
-            padding: 20px 0;
-          }
-
-          .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            height: auto;
-          }
-
           .testimonial-card {
             background-color: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            min-height: 350px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            border-radius: 12px;
+            padding: 2rem;
+            min-height: 380px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             width: 100%;
+            transition: all 0.3s ease;
           }
 
-          .card-body {
-            padding: 1rem 0;
-            height: 100%;
+          .card-body-custom {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
+            gap: 1rem;
           }
 
           .card-title {
-            font-size: 1rem;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
             color: black;
+            line-height: 1.3;
           }
 
           .card-subtitle {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
             color: #666;
+            font-weight: 500;
           }
 
           .star-rating {
             display: flex;
-            gap: 5px;
+            gap: 8px;
             margin-bottom: 1rem;
           }
 
           .star {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            color: #ffc107;
             animation: twinkle 1.5s infinite;
           }
 
@@ -141,23 +134,23 @@ const ClientFeedback = () => {
               opacity: 1;
             }
             50% {
-              opacity: 0.5;
+              opacity: 0.6;
             }
           }
 
           .card-text {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: black;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #333;
             flex-grow: 1;
-            margin-top: 1rem;
+            text-align: justify;
           }
 
           .testimonial-card:hover {
-            transform: translateY(-5px);
-            background-color: black;
+            transform: translateY(-8px);
+            background-color: #000;
             color: white;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px, rgba(0, 0, 0, 0.3) 0px 16px 56px, rgba(0, 0, 0, 0.3) 0px 24px 80px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
           }
 
           .testimonial-card:hover .card-title,
@@ -166,36 +159,44 @@ const ClientFeedback = () => {
           }
 
           .testimonial-card:hover .card-subtitle {
-            color: #cccccc !important;
+            color: #ccc;
           }
 
           .testimonial-card:hover .star {
             color: #ffd700;
           }
 
-          .swiper-button-next,
-          .swiper-button-prev {
-            color: black;
-            background: rgba(0, 0, 0, 0.1);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 50%;
+          /* Swiper Navigation Styling */
+          :global(.swiper-button-next),
+          :global(.swiper-button-prev) {
+            color: #000 !important;
+            background: rgba(0, 0, 0, 0.15) !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            top: 50% !important;
             transform: translateY(-50%);
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 10 !important;
           }
 
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 20px;
+          :global(.swiper-button-next::after),
+          :global(.swiper-button-prev::after) {
+            font-size: 20px !important;
+            font-weight: bold !important;
+          }
+
+          :global(.swiper-button-next:hover),
+          :global(.swiper-button-prev:hover) {
+            background: rgba(0, 0, 0, 0.3) !important;
           }
 
           @media (max-width: 768px) {
             .testimonial-card {
-              min-height: 300px;
-              padding: 1.2rem;
+              min-height: 320px;
+              padding: 1.5rem;
             }
 
             .card-title {
@@ -203,18 +204,18 @@ const ClientFeedback = () => {
             }
 
             .card-subtitle {
-              font-size: 0.8rem;
+              font-size: 0.85rem;
             }
 
             .card-text {
-              font-size: 0.85rem;
-              line-height: 1.5;
+              font-size: 0.9rem;
+              line-height: 1.6;
             }
 
-            .swiper-button-next,
-            .swiper-button-prev {
-              width: 35px;
-              height: 35px;
+            :global(.swiper-button-next),
+            :global(.swiper-button-prev) {
+              width: 40px !important;
+              height: 40px !important;
             }
           }
 
@@ -223,14 +224,7 @@ const ClientFeedback = () => {
           }
 
           .animate-up {
-            opacity: 0;
-            animation: slideUp 0.5s ease-out forwards;
-          }
-
-          @keyframes slideUp {
-            to {
-              opacity: 1;
-            }
+            opacity: 1;
           }
         `}</style>
         <div className="reveal-text text-center">
@@ -253,29 +247,34 @@ const ClientFeedback = () => {
         </div>
       </div>
 
-      <div className="container-fluid px-4" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div className="container">
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={25}
+          spaceBetween={20}
           slidesPerView={1}
-          navigation
+          navigation={true}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           breakpoints={{
-            0: { slidesPerView: 1, spaceBetween: 15 },
-            768: { slidesPerView: 3, spaceBetween: 25 },
+            320: { 
+              slidesPerView: 1, 
+              spaceBetween: 15 
+            },
+            768: { 
+              slidesPerView: 3, 
+              spaceBetween: 20 
+            },
           }}
-          className="swiper-container"
-          style={{ width: '100%' }}
+          style={{ paddingBottom: '50px' }}
         >
           {feedbacks.map((feedback, index) => (
-            <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
-              <div className="testimonial-card card shadow-sm d-flex flex-column">
-                <div className="card-body d-flex flex-column justify-content-between">
+            <SwiperSlide key={index}>
+              <div className="testimonial-card">
+                <div className="card-body-custom d-flex flex-column justify-content-between">
                   <div>
                     <h5 className="card-title font-weight-bold animate-up">
                       {feedback.name}
                     </h5>
-                    <h6 className="card-subtitle mb-2 text-muted animate-up">
+                    <h6 className="card-subtitle mb-2 animate-up">
                       {feedback.title}
                     </h6>
                     <div className="star-rating text-warning mb-3">
