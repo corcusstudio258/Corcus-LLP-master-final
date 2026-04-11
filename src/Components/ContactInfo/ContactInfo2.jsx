@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { submitFormSubmission } from "../../services/googleSheetService";
 
 const ContactInfo2 = () => {
-  const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyW9-x4wX6dS5R9xzmr2sIreQWRyxWgi4CYuRVDVnUAo7xjQXK2lZbV0zr8HuAFIChI/exec";
 
   const [formData, setFormData] = useState({
     Name: "",
@@ -41,38 +40,20 @@ const ContactInfo2 = () => {
     setSubmitStatus(null);
 
     try {
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
-      });
-      formDataToSend.append("recipient", "corcusweb@gmail.com");
-      formDataToSend.append(
-        "subject",
-        "New contact form submission from Corcus website"
-      );
-
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        body: formDataToSend,
+      await submitFormSubmission(formData);
+      setSubmitStatus("success");
+      alert("Form submitted successfully!");
+      setFormData({
+        Name: "",
+        Email: "",
+        Projectname: "",
+        Phone: "",
+        Message: "",
       });
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        alert("Form submitted successfully!");
-        setFormData({
-          Name: "",
-          Email: "",
-          Projectname: "",
-          Phone: "",
-          Message: "",
-        });
-
-        if (typeof fbq !== "undefined") {
-          // eslint-disable-next-line no-undef
-          fbq("track", "Lead");
-        }
-      } else {
-        throw new Error("Server returned error status");
+      if (typeof fbq !== "undefined") {
+        // eslint-disable-next-line no-undef
+        fbq("track", "Lead");
       }
     } catch (error) {
       console.error("Form submission failed:", error);

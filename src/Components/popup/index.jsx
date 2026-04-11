@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./popup.scss"; // keep your styles
 import "./Popup.css";
+import { submitFormSubmission } from "../../services/googleSheetService";
 
 const PopupForm = ({ isOpen, setIsOpen }) => {
   const [formData, setFormData] = useState({
@@ -36,25 +37,8 @@ const PopupForm = ({ isOpen, setIsOpen }) => {
       return;
     }
 
-    const formBody = new URLSearchParams();
-    Object.entries(formData).forEach(([key, value]) =>
-      formBody.append(key, value)
-    );
-
     try {
-      const response = await fetch(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhK91auMffyiONmNUUfk8vyqFOb5lJqvmUY60QQ1mPo1mINiuYxiY3Z2cxIYskNjI6jYLccj7kff6i/pubhtml",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: formBody.toString(),
-        }
-      );
-
-      const resultText = await response.text();
-      console.log("Response from script:", resultText);
+      await submitFormSubmission(formData);
       setSubmitStatus("success");
 
       setTimeout(() => {

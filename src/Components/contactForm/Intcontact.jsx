@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { submitFormSubmission } from "../../services/googleSheetService";
 
 const Internform = () => {
   const [formData, setFormData] = useState({
@@ -40,26 +41,8 @@ const Internform = () => {
       Course: formData.Course,
     };
 
-    const formBody = new URLSearchParams();
-    Object.entries(submissionData).forEach(([key, value]) =>
-      formBody.append(key, value)
-    );
-
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxQkLpKHDXZ1J1XQN-6X4s1Jqx_zBWfdQy5O26KWwbJtnc7f4LtLU4DreKtoliRXwhp/exec", 
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: formBody.toString(),
-        }
-      );
-
-      const resultText = await response.text();
-      console.log(resultText);
-
+      await submitFormSubmission(submissionData);
       alert("Form submitted successfully!");
       setFormData({
         Name: "",

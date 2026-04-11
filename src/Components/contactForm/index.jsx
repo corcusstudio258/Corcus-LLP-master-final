@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { submitFormSubmission } from "../../services/googleSheetService";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,24 +17,8 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formBody = new URLSearchParams();
-    Object.entries(formData).forEach(([key, value]) =>
-      formBody.append(key, value)
-    );
-
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyW9-x4wX6dS5R9xzmr2sIreQWRyxWgi4CYuRVDVnUAo7xjQXK2lZbV0zr8HuAFIChI/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: formBody.toString(),
-        }
-      );
-
-      await response.text();
+      await submitFormSubmission(formData);
       alert("Form submitted successfully!");
       setFormData({ Name: "", Email: "", Contact: "", Message: "" });
     } catch (error) {
