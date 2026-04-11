@@ -7,16 +7,19 @@ const Team3 = () => {
         {img:'/assets/img/team/02.jpg', name:'Vidya Gupta', content:'Co-Founder'},
         {img:'/assets/img/team/03.jpg', name:'Animesh Anand', content:'Co-Founder'},
         {img:'/assets/img/team/04.jpg', name:'Tanisha', content:'CFO'},
-        {img:'/assets/img/team/Mohit.jpg', name:'Mohit', content:'Social Media Manager'},
+        {img:'/assets/img/team/Mohit.jpg', name:'Mohit', content:'ADs Manager'},
         {img:'/assets/img/team/Ashish.jpeg', name:'Ashish Kumar', content:'Social Media Manager'},
         {img:'/assets/img/team/05.jpg', name:'Durganshi', content:'Social Media Manager'},
+        {img:'/assets/img/team/Shweta.jpg', name:'Sweta Kumari', content:'Content writer'},
+        {img:'/assets/img/team/Perna.jpg', name:'Prerna Raj', content:'Team leader'},
         {img:'/assets/img/team/Priyanshu.jpg', name:'Priyanshu Kumar', content:'Shopify Developer / Web Developer'},
         {img:'/assets/img/team/Kajal.jpg', name:'Kajal Kumari', content:'HR'},
-        {img:'/assets/img/team/Shanya.png', name:'Sanyasha Santosh', content:'Content Writer (Intern)'},
+        {img:'/assets/img/team/Sudhir.jpg', name:'Sudhir Kumar', content:'Video Editor'},
+        {img:'/assets/img/team/Vivek.jpg', name:'Vivek Kumar', content:'Video Editor'},
         {img:'/assets/img/team/10.jpg', name:'Deepak', content:'Graphic Designer'},
         {img:'/assets/img/team/11.jpg', name:'Sujit', content:'Graphic Designer'},
-        {img:'/assets/img/team/12.jpg', name:'Alka', content:'Graphic Designer'},
-        {img:'/assets/img/team/Visu.jpeg', name:'Vishwajit kumar', content:'Sales head cum team management'},
+        {img:'/assets/img/team/Alka.jpg', name:'Alka', content:'Graphic Designer'},
+        {img:'/assets/img/team/Visu.jpeg', name:'Vishwajit kumar', content:'Sales Head'},
         
         
       ];
