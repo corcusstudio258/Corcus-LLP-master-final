@@ -30,7 +30,7 @@ const Client = () => {
           Our CLIENTS
         </h3>
         <p className="h5 text-primary text-start text-black">
-          Trusted by 1000K+ customers
+          Trusted by 10K+ customers
         </p>
       </div>
 
