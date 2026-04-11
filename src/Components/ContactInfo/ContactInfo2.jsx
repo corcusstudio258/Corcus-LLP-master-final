@@ -40,7 +40,10 @@ const ContactInfo2 = () => {
     setSubmitStatus(null);
 
     try {
-      await submitFormSubmission(formData);
+      await submitFormSubmission(formData, {
+        source: "Contact Us page form",
+        formName: "Contact Us",
+      });
       setSubmitStatus("success");
       alert("Form submitted successfully!");
       setFormData({
