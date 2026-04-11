@@ -23,7 +23,7 @@ const Abouthero = () => {
       );
     }, 3000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [heroImages.length]);
 
   const heroContent = {
     subtitle: "Grow Your Business with Impactful Advertising",
@@ -76,7 +76,7 @@ const Abouthero = () => {
       </div>
 
       {/* Styles */}
-      <style jsx="true">{`
+      <style>{`
         .about-hero {
           padding: 100px 0 20px 0;
         }

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PrivacyPolicy1 = () => {
   return (
     <div className="container mx-auto px-4 mt-20 pb-10">
@@ -55,7 +53,7 @@ const PrivacyPolicy1 = () => {
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">How We Use Cookies</h2>
         <p>
-          A cookie is a small file which asks permission to be placed on your computer's hard drive. Once you agree, the file
+          A cookie is a small file which asks permission to be placed on your computer&apos;s hard drive. Once you agree, the file
           is added and the cookie helps analyze web traffic or lets you know when you visit a particular site. Cookies allow
           web applications to respond to you as an individual. The web application can tailor its operations to your needs,
           likes and dislikes by gathering and remembering information about your preferences.

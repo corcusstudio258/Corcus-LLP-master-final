@@ -8,7 +8,7 @@ const FloatingWhatsApp = () => {
 
   const openWhatsApp = () => {
     window.open(
-      'https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}',
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };

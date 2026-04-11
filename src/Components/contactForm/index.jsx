@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Marquee from "react-fast-marquee";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ContactForm = () => {
@@ -179,7 +178,7 @@ const ContactForm = () => {
         </div> */}
 
         {/* Custom Styles */}
-        <style jsx="true">{`
+        <style>{`
           .custom-btn:hover {
             background-color: #eeb200 !important;
             border-color: #eeb200 !important;

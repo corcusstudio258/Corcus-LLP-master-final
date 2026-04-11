@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FreshONeedCaseStudy = () => {
     return (
         <div className="container my-5">
@@ -47,7 +45,7 @@ const FreshONeedCaseStudy = () => {
                     <section>
                         <h2 className="h4">Conclusion</h2>
                         <p>Our collaboration with Fresh O Need showcases how a well-structured digital marketing strategy can transform an online business. By addressing their pain points and optimizing their digital presence, we have helped them scale their brand to global markets successfully.</p>
-                        <p>If you're facing similar challenges, let’s connect and take your business to the next level!</p>
+                        <p>If you&apos;re facing similar challenges, let’s connect and take your business to the next level!</p>
                     </section>
                 </div>
             </div>

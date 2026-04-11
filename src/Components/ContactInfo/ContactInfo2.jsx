@@ -66,6 +66,7 @@ const ContactInfo2 = () => {
         });
 
         if (typeof fbq !== "undefined") {
+          // eslint-disable-next-line no-undef
           fbq("track", "Lead");
         }
       } else {

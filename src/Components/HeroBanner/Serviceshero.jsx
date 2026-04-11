@@ -23,7 +23,7 @@ const Serviceshero = () => {
       );
     }, 3000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [heroImages.length]);
 
   const heroContent = {
     subtitle: "What We Offer",
@@ -75,7 +75,7 @@ const Serviceshero = () => {
       </div>
 
       {/* Optional Scoped Styles */}
-      <style jsx="true">{`
+      <style>{`
         .services-hero {
           padding: 100px 0 20px 0;
         }

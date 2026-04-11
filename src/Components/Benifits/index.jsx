@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -98,7 +98,7 @@ const BenefitsSectionStyled = () => {
 
   return (
     <section className="benefits-section py-5 poppins-font">
-      <style jsx="true">{styles}</style>
+      <style>{styles}</style>
       <div className="container">
         {/* Stroke Heading & Paragraph Row */}
         <div className="d-flex justify-content-between align-items-center mb-5 heading-row flex-md-row flex-column gap-3">

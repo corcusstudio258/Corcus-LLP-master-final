@@ -68,7 +68,7 @@ const Value1 = () => {
       </div>
 
       {/* Custom CSS */}
-      <style jsx="true">{`
+      <style>{`
         .stroke-text {
           -webkit-text-stroke: 2px black;
           color: transparent;

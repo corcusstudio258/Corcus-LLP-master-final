@@ -1,4 +1,3 @@
-import BreadCumb from "../Components/Common/BreadCumb";
 import TeamDetails from "../Components/TeamDetails/TeamDetails";
 
 const TeamDetailsPage = () => {

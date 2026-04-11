@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -153,7 +153,7 @@ const ContactForm = () => {
         </button>
       </form>
 
-      <style jsx>{`
+      <style>{`
         .contact-form {
           max-width: 500px;
           margin: 40px auto;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -162,7 +162,7 @@ const Internform = () => {
         </button>
       </form>
 
-      <style jsx>{`
+      <style>{`
         .contact-form {
           max-width: 500px;
           margin: 40px auto;

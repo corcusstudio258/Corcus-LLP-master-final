@@ -24,7 +24,7 @@ const Teamhero = () => {
       );
     }, 3000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [heroImages.length]);
 
   const heroContent = {
     subtitle: "Meet Our Experts",
@@ -63,7 +63,7 @@ const Teamhero = () => {
       </div>
 
       {/* Inline CSS Styles */}
-      <style jsx="true">{`
+      <style>{`
         .hero-section.hero-3 {
           padding: 160px 0 40px 0; /* Section spacing */
         }

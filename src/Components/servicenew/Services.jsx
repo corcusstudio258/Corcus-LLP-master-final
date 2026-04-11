@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Popup from "../popup/Popup";
 import ContactForm from "../contactForm/ContactForm";
@@ -88,7 +88,7 @@ const Servicesnew = () => {
             At our digital marketing agency, we offer a wide range of services
             to help businesses grow and achieve their goals. These services
             include performance marketing, social media management, SEO, content
-            creation, and more — all tailored to boost your brand's online
+            creation, and more — all tailored to boost your brand&apos;s online
             presence and drive real results.
           </p>
         </div>
@@ -113,7 +113,7 @@ const Servicesnew = () => {
           },
           {
             title: "Search Engine Optimization",
-            desc: "Improve your website's visibility and ranking on search engines.",
+            desc: "Improve your website&apos;s visibility and ranking on search engines.",
             img: "assets/img/service/03.gif",
             btnStyle: "light",
             darkStyle: true,
@@ -141,7 +141,7 @@ const Servicesnew = () => {
           },
           {
             title: "E-commerce Marketing",
-            desc: "Comprehensive solutions to boost your online store's sales and visibility.",
+            desc: "Comprehensive solutions to boost your online store&apos;s sales and visibility.",
             img: "assets/img/service/07.gif",
             btnStyle: "light",
             darkStyle: true,

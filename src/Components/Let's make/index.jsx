@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Popup from "../popup/Popup";
 import ContactForm from "../contactForm/ContactForm";
@@ -35,10 +35,10 @@ const Letmake = () => {
     <div className="container d-flex justify-content-center align-items-center min-vh-50">
       <div style={styles.container}>
         <div>
-          <h4 className="font-weight-bold mb-4">Let's Make Things Happen</h4>
+          <h4 className="font-weight-bold mb-4">Let&apos;s Make Things Happen</h4>
           <p className="text-muted mb-4">
             Contact us today to learn how our digital marketing services can
-            help your business grow. Let's make things happen!
+            help your business grow. Let&apos;s make things happen!
           </p>
           <button onClick={() => setIsPopupOpen(true)} style={styles.button}>
             Contact With Us

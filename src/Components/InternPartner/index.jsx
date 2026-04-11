@@ -1,4 +1,3 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const InternPartner = () => {
@@ -43,7 +42,7 @@ const InternPartner = () => {
         </div>
       </div>
 
-      <style jsx="true">{`
+      <style>{`
         .partner-section {
           background-color: #ffffff;
           padding: 3rem 0;

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Popup.css";
 
 const Popup = ({ isOpen, onClose, children }) => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Popup from "../popup/Popup";
 import Internform from "../contactForm/Intcontact";
@@ -11,7 +11,7 @@ const MakeThings = () => {
       <div className="container">
         <div className="bg-light rounded-3 p-4 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div className="mb-4 mb-md-0">
-            <h2 className="fw-bold mb-3">Let's make things happen</h2>
+            <h2 className="fw-bold mb-3">Let&apos;s make things happen</h2>
             <p className="text-secondary mb-4">
               Contact us today to learn more about how our digital
               marketing services can help your business grow and
@@ -59,7 +59,7 @@ const MakeThings = () => {
       )}
 
       {/* CSS for button hover effect */}
-      <style jsx="true">{`
+      <style>{`
         .career-btn {
           transition: all 0.3s ease;
         }

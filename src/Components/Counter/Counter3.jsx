@@ -64,7 +64,7 @@ const Counter3 = () => {
           </div>
         )}
 
-        <style jsx="true">{`
+        <style>{`
           .compact-text {
             font-size: 13px;
             line-height: 1.4;

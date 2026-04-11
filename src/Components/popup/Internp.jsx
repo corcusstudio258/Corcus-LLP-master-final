@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./popup.scss"; // keep your styles
 
-const PopupForm = ({ isOpen, setIsOpen }) => {
+const IntPop = ({ isOpen, setIsOpen }) => {
   const [formData, setFormData] = useState({
     Name: "",
     Phone: "",

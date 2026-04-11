@@ -53,7 +53,7 @@ const ClientFeedback = () => {
   return (
     <div className="bg-white py-2">
       <div className="container text-left mb-5">
-        <style jsx="true">{`
+        <style>{`
           .reveal-text {
             opacity: 0;
             transform: translateY(20px);
