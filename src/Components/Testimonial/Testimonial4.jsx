@@ -257,10 +257,10 @@ const ClientFeedback = () => {
           navigation
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 25 },
-            1024: { slidesPerView: 3, spaceBetween: 25 },
+            0: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 25 },
           }}
+          className="w-100"
         >
           {feedbacks.map((feedback, index) => (
             <SwiperSlide key={index} className="h-100">
