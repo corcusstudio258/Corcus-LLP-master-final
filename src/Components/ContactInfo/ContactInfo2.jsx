@@ -2,6 +2,9 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ContactInfo2 = () => {
+  const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyW9-x4wX6dS5R9xzmr2sIreQWRyxWgi4CYuRVDVnUAo7xjQXK2lZbV0zr8HuAFIChI/exec";
+
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
@@ -42,19 +45,18 @@ const ContactInfo2 = () => {
       Object.entries(formData).forEach(([key, value]) => {
         formDataToSend.append(key, value);
       });
-
-      const response = await fetch(
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhK91auMffyiONmNUUfk8vyqFOb5lJqvmUY60QQ1mPo1mINiuYxiY3Z2cxIYskNjI6jYLccj7kff6i/pubhtml",
-        {
-          method: "POST",
-          body: formDataToSend,
-        }
+      formDataToSend.append("recipient", "corcusweb@gmail.com");
+      formDataToSend.append(
+        "subject",
+        "New contact form submission from Corcus website"
       );
 
-      if (response.ok) {
-        const resultText = await response.text();
-        console.log("Server Response:", resultText);
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: formDataToSend,
+      });
 
+      if (response.ok) {
         setSubmitStatus("success");
         alert("Form submitted successfully!");
         setFormData({
@@ -108,7 +110,7 @@ const ContactInfo2 = () => {
                 </div>
                 <div className="content">
                   <h3>
-                    <a href="mailto:info@corcus.in">info@corcus.in</a>
+                    <a href="mailto:corcusweb@gmail.com">corcusweb@gmail.com</a>
                   </h3>
                   <p>Email us anytime for any queries.</p>
                 </div>
