@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { submitFormSubmission } from "../../services/googleSheetService";
+import { submitLead } from "../../services/apiService";
 
 const ContactInfo2 = () => {
 
@@ -40,7 +40,7 @@ const ContactInfo2 = () => {
     setSubmitStatus(null);
 
     try {
-      await submitFormSubmission(formData, {
+      await submitLead(formData, {
         source: "Contact Us page form",
         formName: "Contact Us",
       });

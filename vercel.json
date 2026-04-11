@@ -13,9 +13,8 @@
     { "source": "/Foncasestudy", "destination": "/index.html" },
     { "source": "/Freshsupermall", "destination": "/index.html" },
     { "source": "/PaidavaarCaseStudy", "destination": "/index.html" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
 
-
-   
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

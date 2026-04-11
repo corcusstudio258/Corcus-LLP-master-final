@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { submitFormSubmission } from "../../services/googleSheetService";
+import { submitLead } from "../../services/apiService";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,10 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      await submitFormSubmission(formData);
+      await submitLead(formData, {
+        source: "Generic contact form",
+        formName: "Contact Form",
+      });
       alert("Form submitted successfully!");
       setFormData({ Name: "", Email: "", Contact: "", Message: "" });
     } catch (error) {

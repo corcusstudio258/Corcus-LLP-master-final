@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { submitFormSubmission } from "../../services/googleSheetService";
+import { submitLead } from "../../services/apiService";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +34,10 @@ const ContactForm = () => {
     };
 
     try {
-      await submitFormSubmission(submissionData);
+      await submitLead(submissionData, {
+        source: "Proposal request form",
+        formName: "Proposal Request",
+      });
       alert("Form submitted successfully!");
       setFormData({
         Name: "",

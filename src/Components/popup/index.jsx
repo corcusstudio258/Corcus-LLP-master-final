@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./popup.scss"; // keep your styles
 import "./Popup.css";
-import { submitFormSubmission } from "../../services/googleSheetService";
+import { submitLead } from "../../services/apiService";
 
 const PopupForm = ({ isOpen, setIsOpen }) => {
   const [formData, setFormData] = useState({
@@ -38,7 +38,10 @@ const PopupForm = ({ isOpen, setIsOpen }) => {
     }
 
     try {
-      await submitFormSubmission(formData);
+      await submitLead(formData, {
+        source: "Popup contact form",
+        formName: "Popup Contact",
+      });
       setSubmitStatus("success");
 
       setTimeout(() => {

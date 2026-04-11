@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { submitFormSubmission } from "../../services/googleSheetService";
+import { submitLead } from "../../services/apiService";
 
 const Internform = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +42,10 @@ const Internform = () => {
     };
 
     try {
-      await submitFormSubmission(submissionData);
+      await submitLead(submissionData, {
+        source: "Intern contact form",
+        formName: "Intern Contact",
+      });
       alert("Form submitted successfully!");
       setFormData({
         Name: "",
