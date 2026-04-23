@@ -31,6 +31,7 @@ const ContactForm = () => {
       Email: formData.Email,
       Business: formData.Business,
       Services: finalService,
+      CustomService: formData.CustomService,
     };
 
     try {

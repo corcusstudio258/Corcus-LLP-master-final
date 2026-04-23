@@ -227,7 +227,7 @@ const ClientFeedback = () => {
             opacity: 1;
           }
         `}</style>
-        <div className="reveal-text text-center">
+        <div className="reveal-text text-start">
           <h1
             className="display-4 font-weight-bold"
             style={{
