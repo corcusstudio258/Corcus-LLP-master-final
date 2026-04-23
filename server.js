@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 const GOOGLE_SCRIPT_URL =
   process.env.GOOGLE_SCRIPT_URL ||
-  "https://script.google.com/macros/s/AKfycbwfbaeYaS3OcU4P6Uy8-RoOUl-4Os8LMJItHM778quPrLBOR8gGThy-wao8ZmWD0T1X/exec";
+  "https://script.google.com/macros/s/AKfycbz1rS7QcpdvIHbKZVRufEkTfxni3uJT__iVGHVvSPOQDhRQH-8UUr3TwgvmXy2stEmz/exec";
 const GOOGLE_SHEET_ID =
   process.env.GOOGLE_SHEET_ID ||
   "1KrS1vB9EzYV21NeOJf6z6Ls71adx509R_3Mnm2cdI_k";
