@@ -125,6 +125,14 @@ const Footer2 = () => {
                       </Link>
                     </li>
                   </ul>
+                  <ul className="list-area">
+                    <li>
+                      <Link to="https://corcus.in/bot/">
+                        <i className="bi bi-arrow-right"></i>
+                       WhatsApp API
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div
