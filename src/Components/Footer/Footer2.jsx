@@ -119,7 +119,7 @@ const Footer2 = () => {
                   </ul>
                   <ul className="list-area">
                     <li>
-                      <Link to="/InternPage">
+                      <Link to="https://corcus.in/academy/">
                         <i className="bi bi-arrow-right"></i>
                        Internship Programs
                       </Link>
