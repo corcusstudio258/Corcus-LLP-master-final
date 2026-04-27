@@ -49,9 +49,9 @@ const Services2 = () => {
     },
     {
       img: "/assets/img/service/08.gif",
-      title: "Analytics & Reporting",
+      title: "WhatsApp Business API",
       subtitle:
-        "In-depth performance analysis to refine and optimize your campaigns.",
+        "In-depth WhatsApp Business API performance analysis to refine, optimize, and scale your customer engagement campaigns.",
     },
   ];
 

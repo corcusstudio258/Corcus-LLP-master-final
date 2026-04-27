@@ -147,8 +147,8 @@ const Servicesnew = () => {
             darkStyle: true,
           },
           {
-            title: "Analytics & Reporting",
-            desc: "In-depth performance analysis to refine and optimize your campaigns.",
+            title: "WhatsApp Business API",
+            desc: "In-depth WhatsApp Business API performance analysis to refine, optimize, and scale your customer engagement campaigns.",
             img: "assets/img/service/08.gif",
             btnStyle: "dark",
             darkStyle: false,
